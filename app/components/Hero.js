@@ -6,7 +6,7 @@ function Hero() {
         <p className="text-xl font-medium text-neutral-400 font-mono">
           Hello My Name is,
         </p>
-        <h1 className="text-4xl md:text-8xl font-bold text-neutral-100 animate-fadeIn">
+        <h1 className="text-4xl md:text-8xl font-bold text-neutral-100 animate-fadeIn ">
           Michael Tom<span className="text-white font-mono">.</span>
         </h1>
         <p className="text-xl text-nowrap md:text-6xl font-bold text-neutral-400 font-sans ">

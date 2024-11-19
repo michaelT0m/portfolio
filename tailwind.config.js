@@ -16,7 +16,7 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn 2s ease-in forwards",
       },
-      
+
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

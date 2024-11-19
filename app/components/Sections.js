@@ -4,7 +4,7 @@ import Project from "./sections/Project";
 import Contact from "./sections/Contact";
 const Sections = () => {
   return (
-    <div className="relative z-10 bg-black mb-40">
+    <div className="relative z-10 ">
       <Hero />
       <About />
       <Project />
@@ -14,3 +14,4 @@ const Sections = () => {
 };
 
 export default Sections;
+// bg-black mb-40

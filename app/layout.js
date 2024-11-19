@@ -15,6 +15,20 @@ const geistMono = localFont({
 export const metadata = {
   title: "Michael Tom",
   description: "A Michael Tom Portfolio ",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logo.svg",
+        href: "/logo.svg",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logo.svg",
+        href: "/logo.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
