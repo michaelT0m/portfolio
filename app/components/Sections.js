@@ -1,7 +1,16 @@
-import React from 'react'
-
+import Hero from "./Hero";
+import About from "./sections/About";
+import Project from "./sections/Project";
+import Contact from "./sections/Contact";
 const Sections = () => {
-  return <section className='pt-32 mx-auto w-4/5'>Sections</section>;
-}
+  return (
+    <div className="relative z-10 bg-black mb-40">
+      <Hero />
+      <About />
+      <Project />
+      <Contact />
+    </div>
+  );
+};
 
 export default Sections;
