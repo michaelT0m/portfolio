@@ -17,11 +17,25 @@ module.exports = {
         fadeIn: "fadeIn 2s ease-in forwards",
       },
 
+      backgroundSize: {
+        bgSize: "70px 70px",
+      },
+
+      backgroundImage: {
+        gridBg: "linear-gradient(to right, #33333346 1px, transparent 1px), linear-gradient(to bottom, #33333346 1px, transparent 1px)"
+      },
+
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        light: {
+          background: "#ffffff",
+          foreground: "#171717",
+        },
+        dark: {
+          background: "#000000",
+          foreground: "#ededed",
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-motion")],
 };
