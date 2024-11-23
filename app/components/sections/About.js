@@ -1,5 +1,4 @@
 import Section from "@/app/features/Section";
-
 const About = () => {
   return (
     <Section id="about" className="bg-black" width="w-full">

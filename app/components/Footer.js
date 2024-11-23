@@ -7,7 +7,7 @@ import { logo } from "@/app/assets/asset";
 import Link from "next/link";
 const Footer = () => {
   return (
-    <footer className="border-t border-neutral-900 bg-black select-none">
+    <footer className="border-t border-neutral-900 bg-black select-none relative">
       <div className="w-4/5 mx-auto py-6 flex justify-between flex-col lg:flex-row gap-4 items-center">
         <div className="flex items-center gap-4 flex-col lg:flex-row ">
           <Link href={"#"}>

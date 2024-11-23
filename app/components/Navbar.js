@@ -4,10 +4,14 @@ import { navItems } from "../constant/data";
 import Link from "next/link";
 import { logo } from "../assets/asset";
 import Image from "next/image";
+import Button from "./ui/Button";
+import { LuSquare, LuX } from "react-icons/lu";
+
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
+  const [menu, setMenu] = useState(false);
 
   useEffect(() => {
     function toggleNav() {
@@ -36,13 +40,24 @@ const Navbar = () => {
           </Link>
         </div>
         <div>
-          <ul className="flex gap-4">
+          <ul className="hidden md:flex gap-4 ">
             {navItems.map((item) => (
               <li key={item.id} className="text-xl ">
                 <Link href={item.path}>{item.pathName}</Link>
               </li>
             ))}
           </ul>
+
+          <button
+            className={`dark:bg-[#15161c] bg-neutral-800 rounded-lg select-none p-3 md:hidden`}
+            onClick={() => setMenu(!menu)}
+          >
+            {menu ? (
+              <LuX className={`text-white/90 font-bold text-xl`} />
+            ) : (
+              <LuSquare className={`text-white/90 font-bold text-xl`} />
+            )}
+          </button>
         </div>
       </nav>
     </header>
