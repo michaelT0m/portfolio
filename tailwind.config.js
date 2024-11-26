@@ -22,7 +22,10 @@ module.exports = {
       },
 
       backgroundImage: {
-        gridBg: "linear-gradient(to right, #33333346 1px, transparent 1px), linear-gradient(to bottom, #33333346 1px, transparent 1px)"
+        gridBg:
+          "linear-gradient(to right, #fafafa 1px, transparent 1px), linear-gradient(to bottom, #fafafa 1px, transparent 1px)",
+        gridBgDark:
+          "linear-gradient(to right, #33333346 1px, transparent 1px), linear-gradient(to bottom, #33333346 1px, transparent 1px)",
       },
 
       colors: {

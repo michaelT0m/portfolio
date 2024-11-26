@@ -23,13 +23,13 @@ export const socialIcons = [
     id: 0.3,
     Icon: LuMail,
     name: "",
-    link: "",
+    link: "mailto:mic81070@gmail.com",
   },
   {
     id: 0,
     Icon: LuGithub,
     name: "",
-    link: "",
+    link: "https://github.com/michaeltom1",
   },
   {
     id: 1,
@@ -42,5 +42,26 @@ export const socialIcons = [
     Icon: LuLinkedin,
     name: "",
     link: "",
+  },
+];
+
+export const projectItems = [
+  {
+    id: 1,
+    title: "Note App",
+    description:
+      "Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+  },
+  {
+    id: 2,
+    title: "Todo App",
+    description:
+      "Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
+  },
+  {
+    id: 3,
+    title: "Blog Site",
+    description:
+      "Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
   },
 ];

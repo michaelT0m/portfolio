@@ -5,7 +5,7 @@ function ThemeProvider({ children }) {
   const ThemeContext = createContext();
 
   return (
-    <div className="bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground bg-bgSize bg-gridBg">
+    <div className="bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground bg-bgSize bg-gridBg dark:bg-gridBgDark">
       <ThemeContext.Provider value={{}}>{children}</ThemeContext.Provider>
     </div>
   );

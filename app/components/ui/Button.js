@@ -14,7 +14,7 @@ export default function Button({
   return (
     <button
       onClick={onClick}
-      className={`dark:bg-neutral-100 bg-neutral-800 rounded-lg ${padding} select-none`}
+      className={`bg-transparent dark:bg-neutral-100 rounded-lg ${padding} select-none`}
     >
       {ibtn ? (
         <Link
