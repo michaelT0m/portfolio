@@ -1,10 +1,9 @@
 "use client";
+import Link from "next/link";
+import Image from "next/image";
+import { logo } from "../assets/asset";
 import { useEffect, useState } from "react";
 import { navItems } from "../constant/data";
-import Link from "next/link";
-import { logo } from "../assets/asset";
-import Image from "next/image";
-import Button from "./ui/Button";
 import { LuSquare, LuX } from "react-icons/lu";
 
 
@@ -12,7 +11,6 @@ const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
   const [menu, setMenu] = useState(false);
-  // const [, setIsVisible] = useState(true);
 
   useEffect(() => {
     function toggleNav() {
@@ -66,6 +64,7 @@ const Navbar = () => {
           <button
             className={`dark:bg-[#15161c] bg-white rounded-lg select-none p-3 md:hidden`}
             onClick={() => setMenu(!menu)}
+            aria-label="Menu"
           >
             {menu ? (
               <LuX className={`text-black dark:text-white/90 font-bold text-xl`} />

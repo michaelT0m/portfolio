@@ -2,11 +2,8 @@
 import { motion } from "motion/react";
 function Hero() {
   return (
-    <main className="h-screen flex items-center mx-auto w-4/5 relative heroBg">
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+    <main id="hero" className="h-screen flex items-center mx-auto w-4/5 relative heroBg">
+      <div
         className="text-start md:text-center w-full "
       >
         <p className="text-xl font-medium text-neutral-400 font-mono motion-preset-typewriter">
@@ -18,7 +15,7 @@ function Hero() {
         <p className="text-4xl lg:text-nowrap md:text-6xl font-bold text-neutral-500 dark:text-neutral-400 font-sans ">
           I am a Frontend Web Developer <span>.</span>
         </p>
-      </motion.div>
+      </div>
     </main>
   );
 }

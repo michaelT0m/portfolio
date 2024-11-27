@@ -6,38 +6,26 @@ export default function Button({
   href = "/",
   onClick,
   className,
-  icon,
   ibtn,
   padding = "p-4",
-  RIcon = LuSendHorizonal,
+  Icon = LuSendHorizonal,
+  alabel="links"
 }) {
   return (
-    <button
+    <Link
+      href={href}
+      className={`bg-transparent dark:bg-neutral-100 rounded-lg ${padding} select-none text-black/90 font-bold text-xl block ${className}`}
       onClick={onClick}
-      className={`bg-transparent dark:bg-neutral-100 rounded-lg ${padding} select-none`}
+      aria-label={alabel}
+      target="_blank"
     >
       {ibtn ? (
-        <Link
-          href={href}
-          className={`text-black/90 font-bold text-xl  ${className}`}
-        >
-          <RIcon className="" />
-        </Link>
+        <Icon />
       ) : (
-        <Link
-          href={href}
-          className={`text-black/90 font-bold text-xl  ${className} ${
-            icon && "flex items-center justify-center gap-2"
-          }`}
-        >
-          {text}
-          {icon && (
-            <span>
-              <RIcon className="" />
-            </span>
-          )}
-        </Link>
+        <span className={`${Icon && "flex items-center gap-4"}`}>
+          {text} {Icon && <Icon />}
+        </span>
       )}
-    </button>
+    </Link>
   );
 }
