@@ -1,4 +1,5 @@
-import { LuTwitter, LuLinkedin, LuGithub, LuMail } from "react-icons/lu";
+import { LuLinkedin, LuGithub, LuMail } from "react-icons/lu";
+ import { FaXTwitter } from "react-icons/fa6";
 
 export const navItems = [
   {
@@ -33,15 +34,15 @@ export const socialIcons = [
   },
   {
     id: 1,
-    Icon: LuTwitter,
+    Icon: FaXTwitter,
     name: "",
-    link: "",
+    link: "https://x.com/mic81070",
   },
   {
     id: 2,
     Icon: LuLinkedin,
     name: "",
-    link: "",
+    link: "https://www.linkedin.com/in/michael-tom-7924a6333/",
   },
 ];
 
