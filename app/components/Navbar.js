@@ -13,6 +13,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   useEffect(() => {
+     if (typeof window === "undefined") return;
     function toggleNav() {
       const currentValue = window.scrollY;
       if (currentValue > lastScroll && currentValue > 100) {

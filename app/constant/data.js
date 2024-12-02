@@ -1,5 +1,5 @@
 import { LuLinkedin, LuGithub, LuMail } from "react-icons/lu";
- import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const navItems = [
   {
@@ -67,6 +67,18 @@ export const projectItems = [
   },
 ];
 
-
 export const theme =
-  "bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground bg-bgSize bg-gridBg dark:bg-gridBgDark scroll-smooth";
+  "bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground bg-bgSize bg-gridBg dark:bg-gridBgDark scroll-smooth selection:bg-[#2c2c75c5]";
+
+/*
+  ::selection {
+  background-color: #15161c;
+  color: #fcfafa;
+  color: #15161c;
+}
+
+::-moz-selection {
+  background-color: #ffcc00;
+  color: #000;
+}
+  */

@@ -11,9 +11,10 @@ console.log();
 
 const Footer = () => {
   const [hover, setHover] = useState(false);
-  const [theme, setTheme] = useState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  );
+  // const [theme, setTheme] = useState(
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+  // );
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -61,7 +62,6 @@ const Footer = () => {
             ) : (
               <Image src={logo} alt="logo" className="w-16" />
             )}
-            
           </Link>
           <h3 className="text-2xl lg:text-4xl font-bold ">
             &copy; 2024 Michael Tom
@@ -85,7 +85,6 @@ const Footer = () => {
             <LuSun className="text-neutral-200 w-6 h-6" />
           )}
         </button>
-
       </div>
     </footer>
   );
