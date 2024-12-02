@@ -9,7 +9,7 @@ const Project = () => {
   return (
     <Section id="projects" sectionName="My Projects">
       {/* <div>
-        <div className="rounded-xl overflow-hidden max-w-2xl bg-secondary">
+        <div className="rounded-br-xl rounded-tl-xl overflow-hidden max-w-2xl bg-secondary">
           <Image src={test} alt="" className="bg-neutral-800 h-80 w-full object-cover" />
           <div className="p-4 space-y-4">
             <h3 className="text-4xl font-bold">The Title</h3>

@@ -66,3 +66,7 @@ export const projectItems = [
       "Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
   },
 ];
+
+
+export const theme =
+  "bg-light-background text-light-foreground dark:bg-dark-background dark:text-dark-foreground bg-bgSize bg-gridBg dark:bg-gridBgDark scroll-smooth";

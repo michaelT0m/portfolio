@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { theme } from "./constant/data";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -33,9 +34,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased ${theme}`}
       >
         {children}
       </body>

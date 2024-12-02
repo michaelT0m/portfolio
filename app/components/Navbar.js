@@ -43,7 +43,7 @@ const Navbar = () => {
         >
           <ul className="hidden md:flex gap-4">
             {navItems.map((item) => (
-              <li key={item.id} className="text-xl ">
+              <li key={item.id} className="text-xl animate-fadeIn">
                 <Link href={item.path}>{item.pathName}</Link>
               </li>
             ))}
@@ -67,9 +67,13 @@ const Navbar = () => {
             aria-label="Menu"
           >
             {menu ? (
-              <LuX className={`text-black dark:text-white/90 font-bold text-xl`} />
+              <LuX
+                className={`text-black dark:text-white/90 font-bold text-xl`}
+              />
             ) : (
-              <LuSquare className={`text-black dark:text-white/90 font-bold text-xl`} />
+              <LuSquare
+                className={`text-black dark:text-white/90 font-bold text-xl`}
+              />
             )}
           </button>
         </div>
