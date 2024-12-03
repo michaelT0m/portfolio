@@ -19,7 +19,7 @@ const Project = () => {
           </div>
         </div>
       </div> */}
-      <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
         {projectItems.map((item) => (
           <Card
             key={item.id}

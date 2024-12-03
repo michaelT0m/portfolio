@@ -7,43 +7,38 @@ import { logo } from "@/app/assets/asset";
 import { socialIcons } from "../constant/data";
 import { LuArrowUp, LuSun, LuMoon, LuMonitor } from "react-icons/lu";
 
-console.log();
-
 const Footer = () => {
   const [hover, setHover] = useState(false);
-  // const [theme, setTheme] = useState(
-  //   window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-  // );
-  const [theme, setTheme] = useState('light');
+ const [theme, setTheme] = useState(() => {
+   // Retrieve the theme from localStorage, default to null if not found
+   if (typeof localStorage === "undefined") return;
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-      applyTheme(savedTheme);
-    } else {
-      const prefersDarkMode = window.matchMedia(
-        "prefers-color-scheme: dark"
-      ).matches;
+   return localStorage.getItem("theme") || null;
+ });
 
-      const initialTheme = prefersDarkMode ? "dark" : "light";
-      setTheme(initialTheme);
-      applyTheme(initialTheme);
-    }
-  }, []);
+ useEffect(() => {
+   // Set the theme based on localStorage or system preference on initial load
+   if (!theme) {
+     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+       setTheme("dark");
+     } else {
+       setTheme("light");
+     }
+   }
+ }, [theme]);
 
-  const applyTheme = (selectedTheme) => {
-    const root = document.documentElement;
-    root.classList.remove("light", "dark");
-    root.classList.add(selectedTheme);
-    localStorage.setItem("theme", selectedTheme);
-  };
+ useEffect(() => {
+   if (theme) {
+     // Apply the theme to the document
+     document.documentElement.classList.toggle("dark", theme === "dark");
+     // Store the theme in localStorage
+     localStorage.setItem("theme", theme);
+   }
+ }, [theme]);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    applyTheme(newTheme);
-  };
+ const toggleTheme = () => {
+   setTheme(theme === "dark" ? "light" : "dark");
+ };
 
   return (
     <footer className="border-t dark:border-neutral-900 bg-light-background dark:bg-dark-background select-none relative ">
@@ -91,3 +86,26 @@ const Footer = () => {
 };
 
 export default Footer;
+/*
+ const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+*/
