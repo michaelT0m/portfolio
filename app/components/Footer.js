@@ -9,36 +9,36 @@ import { LuArrowUp, LuSun, LuMoon, LuMonitor } from "react-icons/lu";
 
 const Footer = () => {
   const [hover, setHover] = useState(false);
- const [theme, setTheme] = useState(() => {
-   // Retrieve the theme from localStorage, default to null if not found
-   if (typeof localStorage === "undefined") return;
+  // const [theme, setTheme] = useState(() => {
+  //   if (typeof localStorage === "undefined") return;
+  //   return localStorage.getItem("theme") || null;
+  // });
+  
+  const [theme, setTheme] = useState(() => {
+    if (typeof localStorage === "undefined") return;
+    return localStorage.getItem("theme") || null;
+  });
 
-   return localStorage.getItem("theme") || null;
- });
+  useEffect(() => {
+    if (!theme) {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
+    }
+  }, [theme]);
 
- useEffect(() => {
-   // Set the theme based on localStorage or system preference on initial load
-   if (!theme) {
-     if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-       setTheme("dark");
-     } else {
-       setTheme("light");
-     }
-   }
- }, [theme]);
+  useEffect(() => {
+    if (theme) {
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      localStorage.setItem("theme", theme);
+    }
+  }, [theme]);
 
- useEffect(() => {
-   if (theme) {
-     // Apply the theme to the document
-     document.documentElement.classList.toggle("dark", theme === "dark");
-     // Store the theme in localStorage
-     localStorage.setItem("theme", theme);
-   }
- }, [theme]);
-
- const toggleTheme = () => {
-   setTheme(theme === "dark" ? "light" : "dark");
- };
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <footer className="border-t dark:border-neutral-900 bg-light-background dark:bg-dark-background select-none relative ">
